@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS gradient</title>
+    <style>
+        body{height: 2000px;}
+        div{height: 100px;}
+        .grad1{
+            background: linear-gradient(to right, red, orange, yellow, green,blue,darkblue,purple);
+        }
+        .grad2{
+            background: linear-gradient(darkblue, yellow);
+            background: linear-gradient(to left,darkblue, yellow);
+            background: linear-gradient(45deg,darkblue, yellow);
+        }
+        .grad3{
+            background: linear-gradient(to right, rgba(0,0,255,1),rgba(0,0,255,0));
+        }
+        .grad4{
+            background: repeating-linear-gradient(to right, pink,green 10%,blue 15%);
+        }
+        .grad5{
+            background: radial-gradient(red, orange, yellow, green,blue,darkblue,purple);
+        }
+        .grad6{
+            background: radial-gradient(red 5%,yellow 20%,orange 50%);
+        }
+        .grad7{
+            width: 100px;
+            background: radial-gradient(circle,red 5%,yellow 20%,orange 50%);
+        }
+        h4{display: inline-block;}
+        .p{height: 200px;width: 200px;display: inline-block;}
+        #grad01{
+            background: radial-gradient(closest-side at 35% 35%, red, yellow, orange);
+        }
+        #grad02{
+            background: radial-gradient(farthest-side at 35% 35%, red, yellow, orange);
+        }
+        #grad03{
+            background: radial-gradient(closest-corner at 35% 35%,red, yellow, orange);
+        }
+        #grad04{
+            background: radial-gradient(farthest-corner at 35% 35%, red, yellow, orange);
+        }
+        #grad08{
+            background: repeating-linear-gradient(pink, white 10%, red 20%);
+        }
+        #grad09{
+            background: repeating-linear-gradient(135deg,pink, white 5%, red 10%);
+        }
+    </style>
+</head>
+<body>
+    <h2>선형 그래디언트</h2>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+
+    <h2>원형 그래디언트</h2>
+    <div class="grad5"></div>
+    <div class="grad6"></div>
+    <div class="grad7"></div>
+
+    <h4>closest-side</h4>
+    <div id="grad01" class="p"></div>
+    <h4>farthest-side</h4>
+    <div id="grad02" class="p"></div>
+    <h4>closest-corner</h4>
+    <div id="grad03" class="p"></div>
+    <h4>farthest-corner</h4>
+    <div id="grad08"></div>
+    <div id="grad09"></div>
+</body>
+</html>
