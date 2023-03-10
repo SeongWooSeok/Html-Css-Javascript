@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+    <style>
+
+        /* @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+        *{
+            font-family: 'Black And White Picture', sans-serif;
+        } */
+
+        @font-face {
+            font-family: 'temp';
+            src: url(/font/BlackAndWhitePicture-Regular.ttf) format('opentype') ;
+        }
+        .file{font-family: 'temp'; font-weight: bold;}
+        .serif{font-family: 'Times New Roman', Times, serif;}
+        .sanserif{font-family: Arial, Helvetica, sans-serif;}
+        .smallCaps{font-variant: small-caps;}
+        .bold{font-weight: bold;}
+        .bolder{font-weight: bolder;}
+        .web{font-family: 'Black And White Picture', sans-serif;}
+        .large{font-size: 2.5em;}
+        .small{font-size: 0.5em;}
+        .fixed{font-size: 20px;}
+    </style>
+</head>
+<body>
+    <h3>font-family 속성이용 글꼴 설정</h3>
+    <p class="serif">Times New Romans 기본 글꼴 가나다라AaBbCcDd</p>
+    <p class="sanserif">Arial 기본 글꼴 가나다라AaBbCcDd</p>
+    <p class="web">웹 폰트 적용 가나다라AaBbCcDd</p>
+    <p class="file">파일 폰트 적용 가나다라AaBbCcDd</p>
+    <p class="smallCaps"> Small Caps Apply</p>
+    <p class="bold">bold 가나다라</p>
+    <p class="bolder">bolder 가나다라AaBbCcDd</p>
+    <p class="large">large 2.5em 가나다라AaBbCcDd</p>
+    <p class="small">small 0.7em 가나다라AaBbCcDd</p>
+    <p class="fixed">fixed 20px 가나다라AaBbCcDd</p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>지원서</title>
+    <style>
+        fieldset { margin-bottom:15px; }
+        legend { font-weight:bold; }
+        ul.show{list-style-type: square;}
+		ul.noshow {list-style-type: none;}
+		li { line-height:30px;}
+    </style>
+  </head>
+
+  <body>
+      <h1><b>프런트엔드 개발자 지원서</b></h1>
+
+      <p>HTML, CSS ,javaScript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+
+      <ul style="list-style-type: square;">
+        <li>모집직군 : 개발자</li>
+        <li>직무내용 : 사이트 화면관련
+            <ul>
+              <li>화면 기획,구현</li>
+              <li>수정사항 반영 및 유지보수</li>
+            </ul>
+        </li>
+        <li>접수 마감일 : 2022.08.26</li>
+      </ul>
+      <hr>
+  
+    <form action="#" method="get">
+        <p><b>개인정보</b></p>
+        <ul style="list-style-type: none;">
+          <li>
+            <label for="name">이름</label>
+            <input type="text" id="name" placeholder="공백없이 입력하세요.">
+          </li>
+          <li>연락처 <input type="tel" name="telnum" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"></li>
+          <li>지원일자 <input type="date" name="date"></li>
+        </ul>
+        
+        <p><strong>지원분야</strong></p>
+        <ul>
+          <input type="radio" name="app">웹 퍼블리싱<br>
+          <input type="radio" name="app" checked>웹 애플리케이션 개발<br>
+          <input type="radio" name="app">개발 환경 개선<br>
+        </ul>
+        
+        <p><b>지원동기</b></p>
+        <textarea name="pub" id="publish" cols="50" rows="10" placeholder="회사 지원동기를 입력해주세요."></textarea><br>
+        <input type="submit" value="접수하기"> <input type="reset" value="다시쓰기">
+    </form>
+
+  </body>
+</html>

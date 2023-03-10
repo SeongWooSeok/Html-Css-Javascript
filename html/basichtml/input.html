@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <!-- id class name 의 차이
+        id는 하나만 존재 class name은 여러개 존재가능
+        id와 class는 css만들때 사용 가능하지만 name은 사용불가능
+        name속성은 javascript에서 요소값확인할때 사용
+     -->
+    <form action="#" name="form1" method="get">
+        <fieldset>
+            <legend>text input</legend>
+            <input type="text" name="text1" placeholder="한줄 입력"><br>
+            <input type="text" name="text1" value="기본값" readonly><br>
+            <input type="password" name="pw" placeholder="압호입력"><br>
+            <textarea name="message"  cols="35" rows="5" placeholder="여러줄입력"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>select</legend>
+            <label>radio</label><br>
+            <input type="radio" name="lecture1" value="html">HTML <br>
+            <input type="radio" name="lecture2" value="css" checked>CSS <br>
+            <input type="radio" name="lecture3" value="java">java <br>
+            <input type="radio" name="lecture4" value="script">javaScript  <br>
+  
+        <label for="">check box</label><br>
+        <input type="checkbox" name="lecture1" value="html">Html<br>
+        <input type="checkbox" name="lecture2" value="css" checked>css<br>
+        <input type="checkbox" name="lecture3" value="java">java<br>
+        <input type="checkbox" name="lecture4" value="script">script<br>
+
+            <label>drop down list</label><br>
+            <select name="fruit" id=""><br>
+                <option value="apple">사과</option>
+                <option value="orange">오렌지</option>
+                <option value="strawberry">딸기</option>
+            <option value="peach">복숭아</option>
+        </select>
+        
+        <input list="lectures" name="lecture"><br>
+        <datalist id="lectures">
+            <option value="apple">사과</option>
+            <option value="orange">오렌지</option>
+            <option value="strawberry">딸기</option>
+            <option value="peach">복숭아</option>
+        </datalist>
+    </fieldset>
+        
+        <button type="submit">전송</button>
+        <input type="submit" value="전송">
+        <input type="reset">
+    </form>
+
+    <form action="#" name="fileform" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>file</legend>
+            <input type="file" name="upload" accept=".pptx,image/*" multiple>
+            <!-- image/* audio/* video/* -->
+        </fieldset>
+        <button type="submit">전송</button>
+    </form>
+    
+    <form action="#" name="formEtc" method="get">
+        <input type="color" id="fav" name="fav" class="fav" placeholder="컬러픽커"><br>
+        <input type="date" name="dday" placeholder="날짜" min="2020-01-01" max="2023-01-01"><br>
+        <input type="month" name="dmonth" placeholder="날짜 월"><br>
+        <input type="time"><br>
+        <input type="week" disabled><br>
+        <input type="email"><br>
+        <input type="search"><br>
+        <input type="tel" name="telnum" placeholder="****-****-****" 
+        pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+        <input type="url"><br>
+        <input type="number" placeholder="숫자입력" min="1" max="20" step="2" required><br>
+        <input type="image" src="/img/1640248870417.jpg" alt="대체" width="50" height="75"><br>
+        <input type="hidden" name="id" value="1234" placeholder="숨겨진 값"><br>
+        <button type="submit">전송</button>
+
+    </form>
+</body>
+</html>
