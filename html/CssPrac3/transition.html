@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +7,31 @@
     <title>CSS transition</title>
     <style>
         #inst{
-            width: 100px; height: 50px;
-            background-color: red; margin-bottom: 10px;
+            width: 100px;height: 50px;
+            background-color: red;margin-bottom: 10px;
             transition-property: width,background-color;
             transition-duration: 2s,2s;
         }
-        #inst:hover{width:300px; background-color: blue;}
+        #inst:hover{width: 300px;background-color: blue;}
         div{
-            font: bold 15px "Open Sans";
+            font:bold 15px "Open Sans";
             color: white;
             text-align: center;
-            width: 100px; height: 50px;
+            width: 100px;height: 50px;
             background-color: red;
             margin-bottom: 10px;
-            transition: width 3s;;
+            transition:width 3s;
         }
         .t1{transition-timing-function: ease;}
         .t2{transition-timing-function: linear;}
         .t3{transition-timing-function: ease-in;}
         .t4{transition-timing-function: ease-out;}
         .t5{transition-timing-function: ease-in-out;}
-        .timing:hover{width: 300px;}
+        .timing:hover{width:300px;}
         .d1{transition-delay: 0s;}
         .d2{transition-delay: 1s;}
-        .d3{transition-delay: 2s;}
-        .delay:hover{width: 300px;}
+        .d3{transition-delay: 3s;}
+        .delay:hover{width:300px;}
     </style>
 </head>
 <body>
