@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+<body>
+    <script>
+        let fruits=['apple','melon','kiwi','banana'];
+        //맨 앞에 orange추가
+        fruits.unshift('orange');
+        console.log(fruits);
+        //맨 뒤에 watermelon 추가
+        fruits.push('watermelon');
+        console.log(fruits);
+        //4번째 자리에 grape 추가
+        fruits.splice(3,0,'grape');
+        console.log(fruits);
+        //알파벳 순서대로 정렬 콘솔에 출력
+        text1 = fruits.sort();
+        console.log(text1);
+        //문자열로 화면에 출력
+        text3 = fruits.join('');
+        document.write(text3);
+        //문자열에 배열요소를 /로 나누어서 화면에 출력
+        text2 = fruits.join('/');
+        console.log(text2);
+        //해당 배열의 요소들을 반복문을 통해 화면에 출력
+        for(let item of fruits){
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

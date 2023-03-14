@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+</head>
+<body>
+    <!-- 1~100까지 합 -->
+    <script>
+        let sum=0;
+        let fnum =100;
+        for(let i=1; i<=100; i++){
+            sum+=i;
+        }
+        document.write("1~100까지의 총합 : ",sum);
+    </script>
+<br>
+    <!-- 1~100 홀수의 총합 -->
+    <script>
+        let oddsum=0;
+        for(let i=1; i<=100; i++){
+            if(i%2==1){
+                oddsum+=i;
+            }
+        }
+        document.write("1~100까지 홀수의 총합 : ",oddsum);
+    </script>
+    <br>
+    <!-- 1~100 짝수의 총합 -->
+    <script>
+        let evensum=0;
+        for(let i=1; i<=100; i++){
+            if(i%2==0){
+                evensum+=i;
+            }
+        }
+        document.write("1~100까지 짝수의 총합 : ",evensum);
+    </script>
+    <br>
+    <!-- 1~100 2의배수와 3의배수들만 총합 -->
+    <script>
+        let somesum=0;
+        for(let i=1; i<=100; i++){
+            if(i%2==0){
+                somesum+=i;
+            }else if(i%3==0){
+                somesum+=i;
+            }
+        }
+        document.write("1~100까지 2의배수 3의배수 합 : ",somesum);
+    </script>
+</body>
+</html>
