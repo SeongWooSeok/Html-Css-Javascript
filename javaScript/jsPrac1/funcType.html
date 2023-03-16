@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function type</title>
+</head>
+<body>
+    <script>
+        //즉시 실행 함수(Immediatly Invoke Function Expression, IIFE)
+        //(function (){}()); 즉시 실행하기에 실행할때 필요한 이름이 필요없음(적어도 문제가 되지는 않음)
+        (function (){
+            let a=1,b=3;
+            document.write(a*b);
+        }());
+       
+        //내부함수
+        function parent(param){
+            let parentVal = param;
+            function children(){
+                let childVal='hong';
+                console.log(parentVal,childVal);
+                document.write(parentVal+childVal);
+            }
+            children();
+        }
+        parent('hello');
+        
+        //재귀함수
+        function factorial(n){
+            if(n<2)return 1;
+            return factorial(n-1)*n;
+        }
+        console.log(factorial(6));
+    </script>
+
+    <button id="btn">버튼 클릭</button>
+    <script>
+        //함수 호이스팅때문에 실행시키려는 함수가 현재 실행함수보다 아래에있어도 문제없이 실행가능
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click',function(){
+            window.alert('버튼을 눌렀어요.');
+            doSomething();
+        });
+        function doSomething(){
+            let name='강';
+            setTimeout(function(){
+                window.alert('내 성은 ' + name + '입니다. ');
+            },1000);
+        }
+    </script>
+</body>
+</html>

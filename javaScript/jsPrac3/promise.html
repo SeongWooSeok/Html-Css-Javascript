@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <script>
+        // console.log('hello');
+        // setTimeout(() => {
+        //     console.log('bye');
+        // }, 3000);
+        // console.log('hello again')
+
+        function goToSchool(){
+            console.log("학교에 갑니다");
+        }
+
+        function arriveAtSchool_w(){
+            setTimeout(() => {
+               console.log('걸어서 학교 도착)') 
+            }, 3000);
+        }
+
+        function study(){
+            console.log("공부를 합시다");
+        }
+
+        function arriveAtSchool_r(){
+            return new Promise(function(resolve){
+                setTimeout(() => {
+                    console.log('달려서 학교 도착');
+                    resolve();
+                }, 1000);
+            })
+        }
+        goToSchool();
+        arriveAtSchool_r.then(()=>study());
+        // arriveAtSchool_w();
+        // study();
+    </script>
+</body>
+</html>

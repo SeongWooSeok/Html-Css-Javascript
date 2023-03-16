@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +8,16 @@
 </head>
 <body>
     <script>
-        let num; //변수선언
-        num=20; //변수에 값 할당
+        let num;//변수 선언
+        num=20;//변수에 값 할당
         console.log(num);
-        num="이십"; //문자열 재할당
+        num="이십";//문자열 재할당
         console.log(num);
-        let res = 10+"문자열";
+        let res = 10+"문자열";//묵시적
         console.log(res);
-        res="10","4"; //묵시적
+        res = "10"*"4";//묵시적
         console.log(res);
-        res=10-"메롱"; //NaN(Not a number)
+        res=10-"메롱";//NaN(Not a Number)
         console.log(res);
         //명시적
         console.log(Number("200"));
@@ -28,11 +28,12 @@
         console.log(parseInt("2.14"));
         console.log(parseFloat("3.123"));
 
+        ha();
         function ha(){
             let num=123;
             console.log(num);
         }
-        ha();
+        console.log(num);
     </script>
 </body>
 </html>
