@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="/javaScript/js/jquery-3.6.4.js"></script>
+</head>
+<body>
+    <p>안녕하세요</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li class="here">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p id="ifr">안녕하세요
+        <a href="http://www.naver.com">네이버</a>
+        입니다.
+    </p>
+    <div>세개의<div><div>요소를</div>순회합니다</div></div>
+    <button id="btn">Loop</button>
+    <ul class="first">
+        <li class="ff">1</li>
+        <li>2</li>
+        <li class="fl">3</li>
+        <script>
+            let temp=$('p').clone().add('<p>잘가</p>');
+            console.log(temp);
+            // $('body').append(temp);
+            temp.appendTo(document.body);
+            // $('body').prepend(temp);
+            temp.prependTo($('body'));
+            //addBack()하면 앞에것도 같이 선택됨
+            $('ul').find('.here').addBack().css('border','1px solid black');
+            console.log($('#ifr').contents());
+        </script>
+    </ul>
+</body>
+</html>

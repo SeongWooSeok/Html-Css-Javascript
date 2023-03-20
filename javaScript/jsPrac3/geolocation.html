@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +7,20 @@
     <title>Geolocation</title>
 </head>
 <body>
-    <script>
-        function init(){
-            console.log(window.navigator.geolocation);
-            window.navigator.geolocation.getCurrentPosition(current_position);
-        }
-        function current_position(position){
-            console.log(position);
-            var msg;
-            msg=`Latitude:${position.coords.latitude}`;
-            msg+=`Longitude:${position.coords.longitude}`;
-            alert(msg);
-        }
-        window.addEventListener("load", init);
-    </script>
+<script>
+    function init(){
+        console.log(window.navigator.geolocation);
+        window.navigator.geolocation
+            .getCurrentPosition(current_position);
+    }
+    function current_position(position){
+        console.log(position);
+        var msg;
+        msg=`Latitude:${position.coords.latitude}`;
+        msg+=` Longitude:${position.coords.longitude}`;
+        alert(msg);
+    }
+    window.addEventListener("load",init);
+</script>
 </body>
 </html>

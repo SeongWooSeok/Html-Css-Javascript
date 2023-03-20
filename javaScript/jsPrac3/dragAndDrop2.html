@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAD2</title> 
+    <title>DAD2</title>
 </head>
 <body>
     <div>
@@ -13,12 +13,12 @@
         <div id="drop1">여기에 드롭하세요</div>
     </div>
     <div>
-        <div id="drop2">여기에 파일을 드롭하세요</div>
+        <div id="drop2">여기에 파일을 드롭하세요.</div>
     </div>
     <script>
         document.getElementById('drag1').ondragstart=function(e){
             console.log('drag start');
-            e.dataTransfer.setData('data', this.innerHTML);
+            e.dataTransfer.setData('data',this.innerHTML);
             e.dataTransfer.dropEffect='copy';
         }
         let drop1=document.getElementById('drop1');
@@ -37,6 +37,14 @@
             e.preventDefault();
             let data=e.dataTransfer;
             console.log(data.items);
+            if(data.items){
+                for(let i=0;i<data.items.length;i++){
+                    if(data.items[i].kind=='file'){
+                        let file=data.items[i].getAsFile();
+                        alert(file.name);
+                    }
+                }
+            }
         };
     </script>
 </body>
