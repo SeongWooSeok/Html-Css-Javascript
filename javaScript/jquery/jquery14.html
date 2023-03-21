@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="/javaScript/js/jquery-3.6.4.js"></script>
+</head>
+<!-- 요소를 넣고 뺄때는 attr를 많이 사용하게 될것임?
+    attr은 요소를 정했을 당시의 상태를 가져와서 반환시킴 checked 이런식으로
+    prop은 요소가 있는지 없는지 boolean값으로 반환함 먄약 checked가 사라졌다면 false로 반환함 -->
+<body>
+    <input type="checkbox" id="test1" checked="checked"/>
+    <input type="checkbox" id="test2" />
+    <div id="result1"></div>
+    <div id="result2"></div>
+
+<script>
+$(function(){
+    $('#result1').html('attr checked : '
+    +$('#test1').attr('checked')
+    +'  //prop checked:'
+    +$('#test1').prop('checked')
+    )
+    $('#result2').html('attr checked : '
+    +$('#test2').attr('checked')
+    +'  //prop unchecked:'
+    +$('#test2').prop('checked')
+    )
+});
+</script>
+    <button id="tbtn">타이틀 변경</button>
+    <input type="text" title="title" id="ins">
+    <div id="result3"></div>
+<script>
+    let inputTitle=$('#ins').attr('title');
+    console.log(inputTitle);
+    $('#tbtn').click(function(){
+        let input = $(this).next();
+        let val = input.val();
+        console.log(input, val);
+        console.log(input.attr('title'),inputTitle);
+    })
+</script>
+<p></p>
+<script>
+    let pa=$('P');
+    pa.prop('addr',9494).append('addr: '+pa.prop('addr'))
+    .removeProp('addr').append(' // addr: '+pa.prop('addr'));
+</script>
+</body>
+</html>

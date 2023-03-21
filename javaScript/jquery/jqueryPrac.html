@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqueryPrac</title>
+    <script src="/javaScript/js/jquery-3.6.4.js"></script>
+    <style>
+        /* p{font-weight: bold;}
+        #box{background-color: black; height: 30px; width: 30px; margin: 3px; display: block;
+        float: left;} */
+        p{margin: 3px; font-size: 20px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <!-- <h3>오늘 점심은 뭘 먹었나요?</h3>
+    <input type="radio" class="kor" name="food">한식</input>
+    <input type="radio" class="chi" name="food">중식</input>
+    <input type="radio" class="jap" name="food">일식</input>
+    <input type="radio" class="ita" name="food">양식</input>
+    <div>
+        <p id="kor">한식
+            <div class="kor"></div>
+        </p>
+        <br>
+        <p id="chi">중식
+            <div class="chi"></div>
+        </p>
+        <br>
+        <p id="jap">일식
+            <div class="jap"></div>
+        </p>
+        <br>
+        <p id="ita">양식
+            <div class="ita"></div>
+        </p>
+    </div>
+    <script>
+        let count =0;
+        $('.kor').on('click',function(){
+            html.count++;
+            $('div .kor').append('<div id="box"></div>'+count);
+        })
+        $('.chi').on('click',function(){
+            $('div .chi').append('<div id="box"></div>');
+        })
+        $('.jap').on('click',function(){
+            $('div .jap').append('<div id="box"></div>');
+        })
+        $('.ita').on('click',function(){
+            $('div .ita').append('<div id="box"></div>');
+        })
+    </script> -->
+
+    <h3>오늘 점심은 뭘 먹었나요?</h3>
+    <input type="radio" class="vote" name="vote" value="0">한식<br>
+    <input type="radio" class="vote" name="vote" value="1">일식<br>
+    <input type="radio" class="vote" name="vote" value="2">중식<br>
+    <input type="radio" class="vote" name="vote" value="3">양식<br>
+    <p>한식</p>
+    <p>일식</p>
+    <p>중식</p>
+    <p>양식</p>
+    <script>
+        $('.vote').click(function(){
+            let index=$(this).val();
+            $('p').eq(index).append('■');
+        })
+    </script>
+    <h3>오늘 점심은 뭘 먹었나요?</h3>
+    <p class="vote2">한식<sum></sum></p>
+    <p class="vote2">일식<sum></sum></p>
+    <p class="vote2">중식<sum></sum></p>
+    <p class="vote2">양식<sum></sum></p>
+    <script>
+        $('.vote2').click(function(){
+        $('.vote2').append('<span>■</span>');
+        $(this).find('sum').text($(this).find('span').length);
+        });
+    </script>
+
+</body>
+</html>
