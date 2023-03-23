@@ -27,7 +27,7 @@ const quotes=[
 //주어진 배열을 랜덤으로 선정해서
 //화면에 quote div의 span안에 각각 출력
 const todayQuote=quotes[Math.floor(Math.random()*quotes.length)];
-document.querySelector('#quote span:first-child').innerHTML
-    =todayQuote.quote;
-document.querySelector('#quote span:last-child').innerHTML
-    =todayQuote.author;
+// document.querySelector('#quote span:first-child').innerHTML=todayQuote.quote;
+$('#quote span').first().html(`<blockquote>${todayQuote.quote}</blockqutoe>`);
+// document.querySelector('#quote span:last-child').innerHTML=todayQuote.author;
+$('#quote span').last().html(todayQuote.author);

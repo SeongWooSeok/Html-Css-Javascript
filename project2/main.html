@@ -6,33 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application</title>
     <link rel="stylesheet" href="/project2/style.css">
+    <script src="/javaScript/js/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h2 id="clock">00:00:00</h2>
-    <form action="" id="login-form" class="hidden">
-        <input type="text" class="id" maxlength="15" placeholder="당신의 이름을 입력하세요.">
-        <input type="submit" value="로그인">
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
+        <h2 id="clock" class="h2 text-white">00:00:00</h2>
+        <form id="login-form" class="row g-3">
+            <div class="col-auto">
+                <input type="text" required class="id" maxlength="15" placeholder="당신의 이름을 입력하세요.">\
+            </div>
+            <div class="col-auto">
+                <input type="submit" value="로그인">
+            </div>
+        </form>
+    <h1 class="h2 d-none text-white" id="greeting"></h1>
     <form id="todo-form">
         <input type="text" placeholder="할일을 입력하고 엔터키를 누르세요." required>
     </form>
-    <ul class="todo-list"></ul>
-    <div id="quote">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            To Do List
+        </div>
+        <ul class="todo-list" class="list-group-flush bg-info"></ul>
+    </div>
+    <div id="quote" class="contain-sm bg-white rounded-3 w-auto">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <span></span>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <span></span>
+            </figcaption>
+        </figure>
+    </div>
+    <div id="weather" class="card" style=>
         <span></span>
         <span></span>
     </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
-    <script src="todo.js"></script>
-    <script src="quotes.js"></script>
-    <script src="background.js"></script>
-    <script src="greeting.js"></script>
-    <script src="/project/clock.js"></script>
-    <script src="weather.js"></script>
+    <script src="/project2/todo.js"></script>
+    <script src="/project2/clock.js"></script>
+    <script src="/project2/greetings.js"></script>
+    <script src="/project2/quotes.js"></script>
+    <script src="/project2/background.js"></script>
+    <script src="/project2/weather.js"></script>
 </body>
 </html>
